@@ -2,18 +2,17 @@ import { NgFor ,NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
-
 @Component({
-  selector: 'app-header',
+  selector: 'app-admin-header',
   standalone: true,
   imports: [NgFor,NgClass,RouterLink],
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  templateUrl: './admin-header.component.html',
+  styleUrl: './admin-header.component.css'
 })
-export class HeaderComponent {
+export class AdminHeaderComponent {
   language : string = 'Angular';
-  menuList = [
-    { id: 1, name: "Home", slug: "/home" },
+  menuAdminList = [
+    { id: 1, name: "Admin", slug: "" },
     { id: 2, name: "Products", slug: "/products" },
     { id: 3, name: "Contact", slug: "/contact" },
     { id: 4, name: "Service", slug: "/service" },
