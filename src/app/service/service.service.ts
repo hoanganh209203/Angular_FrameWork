@@ -16,4 +16,7 @@ export class ServiceService {
   getProductList(): Observable<Product[]>{
     return this.http.get<Product[]>(this.apiUrl); //axios.get(apiUrl)
   }
+  getDetailProduct(id: number): Observable<Product> {
+    return this.http.get<Product>(`${this.apiUrl}/${id}`);
+  }
 }
