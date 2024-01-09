@@ -15,6 +15,6 @@ export class HeaderComponent {
     { id: 2, name: "Products", slug: "/products" },
     { id: 3, name: "Contact", slug: "/contact" },
     { id: 4, name: "Service", slug: "/service" },
-    { id: 5, name: "Login", slug: "/login" },
+    { id: 5, name: "Account", slug: "/login" },
   ]
 }
