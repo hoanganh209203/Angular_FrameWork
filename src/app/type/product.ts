@@ -1,3 +1,5 @@
+import { OnInit } from "@angular/core";
+import { Category } from "./Category";
 export type Product = {
     id: number;
     title: string;
@@ -10,3 +12,8 @@ export type Product = {
       count: number;
     };
   };
+
+  export type ProductAdmin = Omit<Product,'id' | 'category'> & {
+    _id: string;
+    category: Category;
+  }
