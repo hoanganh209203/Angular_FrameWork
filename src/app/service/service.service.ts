@@ -11,7 +11,7 @@ export class ServiceService {
 
   //call API
   apiUrl = 'https://fakestoreapi.com/products';
-  apiAdminUrl = 'https://hoadv-nodejs.vercel.app/api/products'; // khai bao apiUrl
+  apiAdminUrl = 'https://fakestoreapi.com/products'; // khai bao apiUrl
   http = inject(HttpClient);
   constructor() { }
   getProductList(): Observable<Product[]>{
@@ -22,5 +22,8 @@ export class ServiceService {
   }
   getProductListAdmin(): Observable<ProductAdmin[]> {
     return this.http.get<ProductAdmin[]>(this.apiAdminUrl); //axios.get(apiUrl)
+  }
+  getAllProducts(): Observable<Product[]>{
+    return this.http.get<Product[]>(this.apiUrl);
   }
 }

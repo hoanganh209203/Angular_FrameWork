@@ -7,6 +7,7 @@ import { AdminHomepageComponent } from './components/admins/admin-homepage/admin
 import { LayoutComponent } from './components/layout/layout.component';
 import { LoginPageComponent } from './components/clients/login-page/login-page.component';
 import { LayoutAdminComponent } from './components/admins/layout-admin/layout-admin.component';
+import { CategoryComponent } from './components/admins/category/category.component';
 export const routes: Routes = [
     {
         path: "admin",
@@ -22,8 +23,12 @@ export const routes: Routes = [
                 component:AdminHomepageComponent ,
             },
             {
-                path: 'products',
+                path: 'product',
                 component: ProductsComponent ,
+            },
+            {
+                path: 'category',
+                component: CategoryComponent ,
             }
         ]
     },
