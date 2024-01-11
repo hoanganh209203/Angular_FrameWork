@@ -6,7 +6,7 @@ import { ProductsComponent } from './components/admins/products/products.compone
 import { NotFoundPageComponent } from './components/clients/not-found-page/not-found-page.component';
 import { ProductDetailComponent } from './components/clients/product-detail/product-detail.component';
 import { AdminHomepageComponent } from './components/admins/admin-homepage/admin-homepage.component';
-import { HomePageComponent } from './components/clients/home-page/home-page.component';
+import { LayoutComponent } from './components/layout/layout.component';
 import { LoginPageComponent } from './components/clients/login-page/login-page.component';
 export const routes: Routes = [
     {
@@ -25,7 +25,7 @@ export const routes: Routes = [
     },
     {
         path: "",
-        component:AppComponent ,
+        component:LayoutComponent,
         children: [
             {
                     path: "",
