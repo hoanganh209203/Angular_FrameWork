@@ -8,6 +8,8 @@ import { LayoutComponent } from './components/layout/layout.component';
 import { LoginPageComponent } from './components/clients/login-page/login-page.component';
 import { LayoutAdminComponent } from './components/admins/layout-admin/layout-admin.component';
 import { CategoryComponent } from './components/admins/category/category.component';
+import { CreatProductComponent } from './components/admins/creat-product/creat-product.component';
+import { EditProductComponent } from './components/admins/edit-product/edit-product.component';
 export const routes: Routes = [
     {
         path: "admin",
@@ -29,7 +31,14 @@ export const routes: Routes = [
             {
                 path: 'category',
                 component: CategoryComponent ,
-            }
+            }, {
+                path: 'product/create',
+                component: CreatProductComponent ,
+            }, {
+                path: 'product/edit/:id',
+                component: EditProductComponent ,
+            },
+
         ]
     },
     {

@@ -1,6 +1,6 @@
 import { Component ,inject } from '@angular/core';
 import { NgFor } from '@angular/common';
-import { ProductAdmin } from '../../../type/product';
+import { Product } from '../../../type/product';
 import { ServiceService } from '../../../service/service.service';
 import { RouterLink } from '@angular/router';
 
@@ -14,11 +14,15 @@ import { RouterLink } from '@angular/router';
 export class ProductsComponent {
   productService = inject(ServiceService);
 
-  productList : ProductAdmin[] = [];
+  productList : Product[] = [];
 
   ngOnInit():void{
     this.productService
     .getProductListAdmin()
     .subscribe((products) => (this.productList = products));
+  }
+  handleDeleteProduct(id:number){
+    console.log(id);
+    
   }
 }

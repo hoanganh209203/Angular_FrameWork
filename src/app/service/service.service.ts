@@ -20,8 +20,8 @@ export class ServiceService {
   getDetailProduct(id: number): Observable<Product> {
     return this.http.get<Product>(`${this.apiUrl}/${id}`);
   }
-  getProductListAdmin(): Observable<ProductAdmin[]> {
-    return this.http.get<ProductAdmin[]>(this.apiAdminUrl); //axios.get(apiUrl)
+  getProductListAdmin(): Observable<Product[]> {
+    return this.http.get<Product[]>(this.apiAdminUrl); //axios.get(apiUrl)
   }
   getAllProducts(): Observable<Product[]>{
     return this.http.get<Product[]>(this.apiUrl);

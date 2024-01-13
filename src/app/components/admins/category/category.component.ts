@@ -1,6 +1,6 @@
 import { Component ,inject } from '@angular/core';
 import { NgFor } from '@angular/common';
-import { ProductAdmin } from '../../../type/product';
+import { Product, ProductAdmin } from '../../../type/product';
 import { ServiceService } from '../../../service/service.service';
 import { RouterLink } from '@angular/router';
 
@@ -14,7 +14,7 @@ import { RouterLink } from '@angular/router';
 export class CategoryComponent {
   cateService = inject(ServiceService);
 
-  productList : ProductAdmin[] = [];
+  productList : Product[] = [];
 
   ngOnInit():void{
     this.cateService
