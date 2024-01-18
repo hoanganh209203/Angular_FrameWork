@@ -16,8 +16,8 @@ export class HeaderComponent {
     { id: 1, name: "Home", slug: "/home" },
     { id: 2, name: "Products", slug: "/products" },
     { id: 3, name: "Contact", slug: "/contact" },
-    { id: 4, name: "Service", slug: "/service" },
-    { id: 5, name: "Login", slug: "/login" },
+    { id: 4, name: "Login", slug: "/login" },
+    { id: 5, name: "Admin", slug: "/admin" },
   ];
   navigationHiddenOrShow: boolean = true;
 
