@@ -15,16 +15,13 @@ export class ProductDetailComponent implements OnInit{
   productID: number = 0;
   productsAll: Product[] = [];
   product: Product = {
-    id: 0,
+    _id: 0,
     title: "",
     image: "",
     category: "",
     description: "",
     price: 0,
-    rating: {
-      rate: 0,
-      count: 0,
-    }
+    rate:0
   }
 
   constructor(private ProductService: ServiceService, private route: ActivatedRoute) { 

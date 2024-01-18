@@ -1,9 +1,8 @@
 import { Component ,inject } from '@angular/core';
 import { NgFor } from '@angular/common';
-import { Product, ProductAdmin } from '../../../type/product';
-import { ServiceService } from '../../../service/service.service';
+import { Category } from '../../../type/Category';
 import { RouterLink } from '@angular/router';
-
+import { CategoryService } from '../../../service/categorises/category.service';
 @Component({
   selector: 'app-category',
   standalone: true,
@@ -12,13 +11,13 @@ import { RouterLink } from '@angular/router';
   styleUrl: './category.component.css'
 })
 export class CategoryComponent {
-  cateService = inject(ServiceService);
+  cateService = inject( CategoryService);
 
-  productList : Product[] = [];
+  productList : Category[] = [];
 
   ngOnInit():void{
     this.cateService
-    .getProductListAdmin()
-    .subscribe((category) => (this.productList = category));
+    .getCategoryListAdmin()
+    .subscribe((cate) => (this.productList = cate));
   }
 }

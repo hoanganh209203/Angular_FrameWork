@@ -1,19 +1,17 @@
-import { OnInit } from "@angular/core";
+
 import { Category } from "./Category";
 export type Product = {
-    id: number;
+    _id: number;
     title: string;
     price: number;
     image: string;
     description: string;
     category: string;
-    rating: {
-      rate: number;
-      count: number;
-    };
+    rate: number;
   };
 
   export type ProductAdmin = Omit<Product,'id' | 'category'> & {
     _id: string;
     category: Category;
   }
+  export type ProductAdd = Omit<Product, 'id' | 'rate'>;
